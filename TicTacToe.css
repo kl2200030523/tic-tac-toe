@@ -1,0 +1,81 @@
+/* TicTacToe.css */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FFD1DC;
+    font-family: 'Arial', sans-serif;
+    color: #f4f4f4;
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative; /* Needed for absolute positioning of confetti */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    z-index: 1; /* Ensure the game board is above the background but below overlays */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #FFD1DC;
+    border: 3px solid #e429a9;
+    font-size: 24px;
+    color: #e653b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #FFD1DC;
+    transform: scale(1.05);
+}
+
+#resetButton {
+    background-color: #e653b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#resetButton:hover {
+    background-color: #e955b8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#modeSelection button {
+    background-color: #e356ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    z-index: 2; /* Ensure mode selection buttons are above other elements */
+}
+
+#modeSelection button:hover {
+    background-color: #FFD1DC;
+}
